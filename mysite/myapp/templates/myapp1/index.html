@@ -1,0 +1,8 @@
+{% extends 'myapp1/base.html'  %}
+
+   {% block body %}
+    {%for book in book_list%}
+        <a href="{% url 'myapp:detail' book.id%}">{{book.name}}</a><br>
+    {% endfor %}
+    {% endblock %}
+ 
